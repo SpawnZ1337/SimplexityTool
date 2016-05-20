@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Applications - Ethereal Gaming Utilities</title>
+
+    <link href="../css/bootstrap.min.css?v=0" rel="stylesheet" />
+    <link href="../css/style.css?v=0" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="margin-bottom-25">
+                        <a href="../" class="btn btn-primary">Home</a>
+                    </div>
+
+                    <div class="alert alert-info margin-bottom-25">
+                        <span class="glyphicon glyphicon-info-sign"></span> The dates are calculated in UTC time and will
+                        only update when you refresh the page.
+                    </div>
+
+                    <div class="margin-bottom-25">
+                        <button type="button" class="btn btn-danger" id="clear-button">Clear controls</button>
+                    </div>
+
+                    <!-- START Game select -->
+                    <div class="margin-bottom-25">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label for="game-select">Game</label>
+                                <select id="game-select" class="form-control">
+                                    <option value="general">General</option>
+                                    <option value="league-of-legends">League of Legends</option>
+                                    <option value="heroes-of-the-storm">Heroes of the Storm</option>
+                                    <option value="counter-strike">Counter Strike</option>
+                                    <option value="black-desert-online">Black Desert Online</option>
+                                    <option value="smite">Smite</option>
+                                    <option value="overwatch">Overwatch</option>
+                                    <option value="world-of-warcraft">World of Warcraft</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Game select -->
+
+                    <!-- START Details of New User form -->
+                    <div class="margin-bottom-25">
+                        <h4>
+							<strong>Details of New User</strong>
+						</h4>
+                        <div class="margin-bottom-10">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label for="new-forum-name-input">Forum Name</label>
+                                    <input type="text" class="form-control new-user-details-control" id="new-forum-name-input" data-show-for-games="all" placeholder="Forum Name"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-ingame-name-input">Ingame Name</label>
+                                    <input type="text" class="form-control new-user-details-control" id="new-ingame-name-input" data-show-for-games="black-desert-online heroes-of-the-storm overwatch world-of-warcraft"
+                                    placeholder="Ingame Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-black-desert-online-region-select">Region</label>
+                                    <select class="form-control new-user-details-control" id="new-black-desert-online-region-select" data-show-for-games="black-desert-online">
+                                        <option value="NA">NA</option>
+                                        <option value="EU">EU</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-hots-region-select">Region</label>
+                                    <select class="form-control new-user-details-control" id="new-hots-region-select" data-show-for-games="heroes-of-the-storm">
+                                        <option value="NA">NA</option>
+                                        <option value="EU">EU</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-lol-region-select">Region</label>
+                                    <select class="form-control new-user-details-control" id="new-lol-region-select" data-show-for-games="league-of-legends">
+                                        <option value="EUW">EUW</option>
+                                        <option value="NA">NA</option>
+                                        <option value="EUNE">EUNE</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-overwatch-region-select">Region</label>
+                                    <select class="form-control new-user-details-control" id="new-overwatch-region-select" data-show-for-games="overwatch">
+                                        <option value="NA">NA</option>
+                                        <option value="EU">EU</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label for="ts-id-input">TeamSpeak ID</label>
+                                <input type="text" class="form-control new-user-details-control" id="ts-id-input" data-show-for-games="all" placeholder="TeamSpeak ID"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="application-url-input">Link to Application</label>
+                                <input type="text" class="form-control new-user-details-control" id="application-url-input" data-show-for-games="all" placeholder="Link to Application"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Details of New User form -->
+
+                    <!-- START Content boxes -->
+                    <h3 class="text-primary">
+						<strong>Interview</strong>
+						<small>General</small>
+					</h3>
+                    <div class="well async-content-block" data-content="interview-general">
+                        <strong>Loading...</strong>
+                    </div>
+
+                    <h3 class="text-primary">
+						<strong>Interview</strong>
+						<small>Game Specific</small>
+					</h3>
+                    <div class="well async-content-block" data-content="interview-specific">
+                        <strong>Loading...</strong>
+                    </div>
+
+                    <h3 class="text-success">
+						<strong>Application</strong>
+						<small>Accepted</small>
+					</h3>
+                    <div class="well async-content-block" data-content="application-accepted">
+                        <strong>Loading...</strong>
+                    </div>
+
+                    <h3 class="text-success">
+						<strong>Application</strong>
+						<small>On Trial</small>
+					</h3>
+                    <div class="well async-content-block" data-content="application-on-trial">
+                        <strong>Loading...</strong>
+                    </div>
+
+                    <h3 class="text-danger">
+						<strong>TED</strong>
+						<small>Title</small>
+					</h3>
+                    <div class="well async-content-block" data-content="ted-title">
+                        <strong>Loading...</strong>
+                    </div>
+
+                    <h3 class="text-danger">
+						<strong>TED</strong>
+						<small>Content</small>
+					</h3>
+                    <div class="well async-content-block" data-content="ted-content">
+                        <strong>Loading...</strong>
+                    </div>
+                    <!-- END Content boxes -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery/jquery-2.1.4.min.js?v=0"></script>
+    <script type="text/javascript" src="../js/bootstrap/bootstrap.min.js?v=0"></script>
+    <script type="text/javascript" src="../js/momentjs/moment.js?v=0"></script>
+    <script type="text/javascript" src="../js/momentjs/moment-timezone-with-data.js?v=0"></script>
+    <script type="text/javascript" src="js/main.js?v=2"></script>
+</body>
+
+</html>
