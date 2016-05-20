@@ -1,6 +1,6 @@
 This README is outdated
 
-# The Chaos Vanguard Utilities
+# Ethereal Gaming Utilities
 
 ## Applications/Content
 
