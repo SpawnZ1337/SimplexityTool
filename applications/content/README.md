@@ -1,6 +1,6 @@
-This README is outdated
-
 # Ethereal Gaming Utilities
+
+Hello everyone, it's Melidas. In this README I'll explain how you can tweak the tool safely, and how it works.
 
 ## Applications/Content
 
@@ -9,20 +9,20 @@ on the applications tool (apart from this README.md).
 
 #### How are the files loaded into the boxes?
 
-When loading in the content from an HTML file, the script first looks if
+When the tool is loading HTML files to input for the content boxes, the script first looks if
 there is content in the HTML file being loaded in the specific folder
 for the game that has been selected in the dropdownlist.
 When there isn't any content in it,
 it will try to get the content from the HTML file in this 'content' folder.
 
-For example, when Warframe has been selected in the dropdownlist
+For example, when League of Legends has been selected in the dropdownlist
 and the script is loading in the ted-content.html file,
 it will first look if there is content in
-[/applications/content/warframe/ted-content.html](https://github.com/CV-Thoziard/cv-thoziard.github.io/blob/master/applications/content/warframe/ted-content.html).
+[/applications/content/league-of-legends/ted-content.html](https://github.com/melidas/melidas.github.io/blob/master/applications/content/league-of-legends/ted-content.html).
 When there is text in that HTML file, it will load that into the corresponding box
 and the script will move on.
-If it's empty however, it will look at 
-[the 'default' ted-content.html file in this folder](https://github.com/CV-Thoziard/cv-thoziard.github.io/blob/master/applications/content/ted-content.html).
+If the file is empty however, it will look at 
+[the 'default' ted-content.html file in this folder](https://github.com/melidas/melidas.github.io/blob/master/applications/content/ted-content.html).
 When this file has content, it will be loaded into the box.
 When it would also be empty, a generic *"No content has been found."* will be shown.
 
@@ -36,12 +36,11 @@ They probably have more 'makeup' with links and lists in them.
 Much more HTML is being used in these files than in the other ones.
 
 If you still would like to edit them however,
-you probably only want to update the interview-general.html file in the default 'content' folder
-and the interview-specific.html file in the game specific folders.
+Ièd suggest only editing the interview-specific.html or the interview-general.html.
 
 The following table specifies which HTML file corresponds with which box on the page.
 
-Content Block Name | HTML File Name
+Content Box Name | HTML File Name
 ------------------ | --------------
 Interview - General | interview-general.html
 Interview - Game Specific | interview-specific.html
@@ -49,6 +48,9 @@ Application - Accepted | application-accepted.html
 Application - On Trial | application-on-trial.html
 TED - Title | ted-title.html
 TED - Content | ted-content.html
+Reply - If Multi-Clanning | reply-multiclan.html
+Reply - If Micless | reply-nomic.html
+Decline - Underage | deny-undersixteen.html
 
 #### How should I edit the files?
 
@@ -61,10 +63,7 @@ When you don't, a default description will be used.
 Make sure that the *'Commit directly to the `master` branch'* option has been selected
 before you click the *'Commit changes'* button.
 
-**You will be able to break things!**
-Everything you commit will be online right away.
-When you did something wrong and broke the website but are not able to revert it yourself,
-please contact me as soon as possible and I will revert the change.
+Since everything commits live automatically once something is changed, you could mess something up. When this occurs, please contact me straight away so I can fix it.
 
 #### What should the content look like?
 
@@ -80,9 +79,9 @@ When you don't do that, a space will be used instead between the lines.
 * `<` is a reserved character in HTML. Use `&lt;` instead.
 * `>` is a reserved character in HTML. Use `&gt;` instead.
 
-Like you may notice, I also use placeholders in `{` `}`.
+You should also note that I use placeholders in `{` `}`.
 These placeholders are used to fill in the dates or the content
-that the user has filled into the form fields near the top of the page.
+that the moderator has filled into the form fields called 'details of new user' at the top of the page of the page.
 The following placeholders are being used:
 * **{game-name}** - The name of the game, selected in the first dropdownlist
 * **{forum-name}** - The forum name of the new trialist, filled into the corresponding text box
