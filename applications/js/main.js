@@ -93,7 +93,7 @@
 		
 		switch (selectedGame) {
             case 'black-desert-online':
-                ingameNameText = 'Ingame Name';
+                ingameNameText = 'Main Character Name';
                 break;
             
 			case 'heroes-of-the-storm':
