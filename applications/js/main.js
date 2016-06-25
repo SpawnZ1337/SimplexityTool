@@ -41,7 +41,6 @@
 		return content.replace(/{game-name}/g, '<span class="game-name-placeholder"></span>')
 			.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
 			.replace(/{ingame-name}/g, '<span class="ingame-name-placeholder"></span>')
-			.replace(/{black-desert-online-region}/g, '<span class="black-desert-online-region-placeholder"></span>')
 			.replace(/{hots-region}/g, '<span class="hots-region-placeholder"></span>')
 			.replace(/{lol-region}/g, '<span class="lol-region-placeholder"></span>')
 			.replace(/{overwatch-region}/g, '<span class="overwatch-region-placeholder"></span>')
@@ -59,7 +58,6 @@
 		$('span.game-name-placeholder', $blockContext).text($('#game-select option:selected').text());
 		$('span.forum-name-placeholder', $blockContext).text($('#new-forum-name-input').val());
 		$('span.ingame-name-placeholder', $blockContext).text($('#new-ingame-name-input').val());
-		$('span.black-desert-online-region-placeholder', $blockContext).text($('#new-black-desert-online-region-select').val());
 		$('span.hots-region-placeholder', $blockContext).text($('#new-hots-region-select').val());
 		$('span.lol-region-placeholder', $blockContext).text($('#new-lol-region-select').val());
 		$('span.overwatch-region-placeholder', $blockContext).text($('#new-overwatch-region-select').val());
@@ -93,7 +91,7 @@
 		
 		switch (selectedGame) {
             case 'black-desert-online':
-                ingameNameText = 'Main Character Name';
+                ingameNameText = 'Ingame Name';
                 break;
             
 			case 'heroes-of-the-storm':
