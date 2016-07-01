@@ -27,29 +27,19 @@
 		 * {game-name}
 		 * {forum-name}
 		 * {ingame-name}
-		 * {hots-region}
-		 * {lol-region}
-		 * {overwatch-region}
 		 * {ts-id}
 		 * {link-application}
- 		 * {start-trial-date-short}
- 		 * {end-trial-date-short}
- 		 * {start-trial-date-long}
-		 * {end-trial-date-long}
+		 * {link-profile}
+		 * {link-ted}
 		 */
 
 		return content.replace(/{game-name}/g, '<span class="game-name-placeholder"></span>')
 			.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
 			.replace(/{ingame-name}/g, '<span class="ingame-name-placeholder"></span>')
-			.replace(/{hots-region}/g, '<span class="hots-region-placeholder"></span>')
-			.replace(/{lol-region}/g, '<span class="lol-region-placeholder"></span>')
-			.replace(/{overwatch-region}/g, '<span class="overwatch-region-placeholder"></span>')
 			.replace(/{ts-id}/g, '<span class="ts-id-placeholder"></span>')
 			.replace(/{link-application}/g, '<span class="link-application-placeholder"></span>')
-			.replace(/{start-trial-date-short}/g, '<span class="start-trial-date-short-placeholder"></span>')
-			.replace(/{end-trial-date-short}/g, '<span class="end-trial-date-short-placeholder"></span>')
-			.replace(/{start-trial-date-long}/g, '<span class="start-trial-date-long-placeholder"></span>')
-			.replace(/{end-trial-date-long}/g, '<span class="end-trial-date-long-placeholder"></span>');
+			.replace(/{forum-profile}/g, '<span class="forum-profile-placeholder"></span>')
+			.replace(/{link-ted}/g, '<span class="link-ted-placeholder"></span>')
 	}
 
 	// Update the text in the placeholder spans with the text in the form controls
@@ -58,15 +48,10 @@
 		$('span.game-name-placeholder', $blockContext).text($('#game-select option:selected').text());
 		$('span.forum-name-placeholder', $blockContext).text($('#new-forum-name-input').val());
 		$('span.ingame-name-placeholder', $blockContext).text($('#new-ingame-name-input').val());
-		$('span.hots-region-placeholder', $blockContext).text($('#new-hots-region-select').val());
-		$('span.lol-region-placeholder', $blockContext).text($('#new-lol-region-select').val());
-		$('span.overwatch-region-placeholder', $blockContext).text($('#new-overwatch-region-select').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
-		$('span.start-trial-date-short-placeholder', $blockContext).text(currentDateFormats.startShort);
-		$('span.end-trial-date-short-placeholder', $blockContext).text(currentDateFormats.endShort);
-		$('span.start-trial-date-long-placeholder', $blockContext).text(currentDateFormats.startLong);
-		$('span.end-trial-date-long-placeholder', $blockContext).text(currentDateFormats.endLong);
+		$('span.forum-profile-placeholder', $blockContext).text($('#profilen-url-input').val());
+		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 	}
 
 	// Add the given content to the given contentBlock after the placeholders have been replaced by the text
