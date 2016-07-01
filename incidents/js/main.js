@@ -44,7 +44,7 @@
 		$('span.forum-name-placeholder', $blockContext).text($('#new-forum-name-input').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
-		$('span.forum-profile-placeholder', $blockContext).text($('#profilen-url-input').val());
+		$('span.forum-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 	}
 
