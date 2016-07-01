@@ -41,7 +41,7 @@
 	// Update the text in the placeholder spans with the text in the form controls
 	// NOTE: With this method, placeholders that don't need an update will also be updated
 	function updateTextInPlaceholderSpans($blockContext) {
-		$('span.forum-name-placeholder', $blockContext).text($('#new-forum-name-input').val());
+		$('span.forum-name-placeholder', $blockContext).text($('#forum-name-input').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
 		$('span.forum-profile-placeholder', $blockContext).text($('#profile-url-input').val());
