@@ -24,18 +24,14 @@
 	function replacePlaceholdersBySpans(content) {
 		/*
 		 * The following placeholders are being used:
-		 * {game-name}
 		 * {forum-name}
-		 * {ingame-name}
 		 * {ts-id}
 		 * {link-application}
 		 * {link-profile}
 		 * {link-ted}
 		 */
 
-		return content.replace(/{game-name}/g, '<span class="game-name-placeholder"></span>')
-			.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
-			.replace(/{ingame-name}/g, '<span class="ingame-name-placeholder"></span>')
+		return content.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
 			.replace(/{ts-id}/g, '<span class="ts-id-placeholder"></span>')
 			.replace(/{link-application}/g, '<span class="link-application-placeholder"></span>')
 			.replace(/{forum-profile}/g, '<span class="forum-profile-placeholder"></span>')
@@ -45,9 +41,7 @@
 	// Update the text in the placeholder spans with the text in the form controls
 	// NOTE: With this method, placeholders that don't need an update will also be updated
 	function updateTextInPlaceholderSpans($blockContext) {
-		$('span.game-name-placeholder', $blockContext).text($('#game-select option:selected').text());
 		$('span.forum-name-placeholder', $blockContext).text($('#new-forum-name-input').val());
-		$('span.ingame-name-placeholder', $blockContext).text($('#new-ingame-name-input').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
 		$('span.forum-profile-placeholder', $blockContext).text($('#profilen-url-input').val());
