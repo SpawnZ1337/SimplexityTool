@@ -99,23 +99,8 @@
 					url: 'content/' + contentToLoadFileName,
 					cache: false,
 					success: function (defaultContent) {
-						if (defaultcContent !== undefined && defaultContent !== null && defaultContent !== '') {
+						if (defaultContent !== undefined && defaultContent !== null && defaultContent !== '') {
 							addContentWithValuesToBlock($asyncContentBlock, defaultContent);
-						} else {
-
-							$.ajax({
-								method: 'GET',
-								url: 'content/' + contentToLoadFileName,
-								cache: false,
-								success: function (specificContent) {
-									if (specificContent !== undefined && specificContent !== null && specificContent !== '') {
-										addContentWithValuesToBlock($asyncContentBlock, defaultContent);
-									} else {
-										$asyncContentBlock.html('<strong>No content has been found.</strong>');
-									}
-								}
-							});
-						}
 					}
 				});
 			});
