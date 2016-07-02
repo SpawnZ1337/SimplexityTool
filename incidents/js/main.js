@@ -48,6 +48,8 @@
 	// Update the text in the placeholder spans with the text in the form controls
 	// NOTE: With this method, placeholders that don't need an update will also be updated
 	function updateTextInPlaceholderSpans($blockContext) {
+		$('span.proof-placeholder', $blockContext).text($('#proof-input').val());
+		$('span.incident-explained-placeholder', $blockContext).text($('#incident-explained-input').val());
 		$('span.forum-name-placeholder', $blockContext).text($('#forum-name-input').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
@@ -55,8 +57,6 @@
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startShort);
 		$('span.people-involved-placeholder', $blockContext).text($('#people-involved-input').val());
-		$('span.incident-explained-placeholder', $blockContext).text($('#incident-explained-input').val());
-		$('span.proof-placeholder', $blockContext).text($('#proof-input').val());
 	}
 
 	// Add the given content to the given contentBlock after the placeholders have been replaced by the text
