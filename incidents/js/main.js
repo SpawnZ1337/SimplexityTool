@@ -36,7 +36,7 @@
 		return content.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
 			.replace(/{ts-id}/g, '<span class="ts-id-placeholder"></span>')
 			.replace(/{link-application}/g, '<span class="link-application-placeholder"></span>')
-			.replace(/{forum-profile}/g, '<span class="forum-profile-placeholder"></span>')
+			.replace(/{forum-profile}/g, '<span class="link-profile-placeholder"></span>')
 			.replace(/{link-ted}/g, '<span class="link-ted-placeholder"></span>')
 			.replace(/{incident-date}/g, '<span class="incident-date-placeholder"></span>')
 			.replace(/{people-involved}/g, '<span class="people-involved-placeholder"></span>')
@@ -51,7 +51,7 @@
 		$('span.forum-name-placeholder', $blockContext).text($('#forum-name-input').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
-		$('span.forum-profile-placeholder', $blockContext).text($('#profile-url-input').val());
+		$('span.link-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startLong);
 		$('span.people-involved-placeholder', $blockContext).text($('#people-involved-input').val());
@@ -150,7 +150,7 @@
 					url: 'content/' + contentToLoadFileName,
 					cache: false,
 					success: function (specificContent) {
-						if (specificContent !== undefined && specificContent !== null && specificContent !== '') {
+						if (specificContent !== undefined && defaultContent !== null && defaultContent !== '') {
 							addContentWithValuesToBlock($asyncContentBlock, specificContent);
 						} else {
 
@@ -159,7 +159,7 @@
 								url: 'content/' + contentToLoadFileName,
 								cache: false,
 								success: function (defaultContent) {
-									if (defaultContent !== undefined && defaultContent !== null && defaultContent !== '') {
+									if (defaultContent !== undefined && specificContent !== null && specificContent !== '') {
 										addContentWithValuesToBlock($asyncContentBlock, defaultContent);
 									} else {
 										$asyncContentBlock.html('<strong>No content has been found.</strong>');
