@@ -30,6 +30,7 @@
 		 * {link-profile}
 		 * {link-ted}
 		 * {incident-date}
+		 * {people-involved}
 		 */
 
 		return content.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
@@ -38,6 +39,10 @@
 			.replace(/{forum-profile}/g, '<span class="forum-profile-placeholder"></span>')
 			.replace(/{link-ted}/g, '<span class="link-ted-placeholder"></span>')
 			.replace(/{incident-date}/g, '<span class="incident-date-placeholder"></span>')
+			.replace(/{people-involved}/g, '<span class="people-involved-placeholder"></span>')
+			.replace(/{incident-explained}/g, '<span class="incident-explained-placeholder"></span>')
+			.replace(/{proof}/g, '<span class="proof-placeholder"></span>')
+			
 	}
 
 	// Update the text in the placeholder spans with the text in the form controls
@@ -49,6 +54,9 @@
 		$('span.forum-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startLong);
+		$('span.people-involved-placeholder', $blockContext).text($('#people-involved-input').val());
+		$('span.incident-explained-placeholder', $blockContext).text($('#incident-explained-input').val());
+		$('span.proof-placeholder', $blockContext).text($('#proof-input').val());
 	}
 
 	// Add the given content to the given contentBlock after the placeholders have been replaced by the text
