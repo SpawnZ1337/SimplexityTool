@@ -29,6 +29,7 @@
 		 * {link-application}
 		 * {link-profile}
 		 * {link-ted}
+		 * {incident-date}
 		 */
 
 		return content.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
@@ -36,6 +37,7 @@
 			.replace(/{link-application}/g, '<span class="link-application-placeholder"></span>')
 			.replace(/{forum-profile}/g, '<span class="forum-profile-placeholder"></span>')
 			.replace(/{link-ted}/g, '<span class="link-ted-placeholder"></span>')
+			.replace(/{incident-date}/g, '<span class="incident-date-placeholder"></span>')
 	}
 
 	// Update the text in the placeholder spans with the text in the form controls
@@ -46,6 +48,7 @@
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
 		$('span.forum-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
+		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startLong);
 	}
 
 	// Add the given content to the given contentBlock after the placeholders have been replaced by the text
