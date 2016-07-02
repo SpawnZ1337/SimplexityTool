@@ -26,7 +26,6 @@
 		 * The following placeholders are being used:
 		 * {forum-name}
 		 * {ts-id}
-		 * {link-application}
 		 * {link-profile}
 		 * {link-ted}
 		 * {incident-date}
@@ -35,7 +34,6 @@
 
 		return content.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
 			.replace(/{ts-id}/g, '<span class="ts-id-placeholder"></span>')
-			.replace(/{link-application}/g, '<span class="link-application-placeholder"></span>')
 			.replace(/{forum-profile}/g, '<span class="link-profile-placeholder"></span>')
 			.replace(/{link-ted}/g, '<span class="link-ted-placeholder"></span>')
 			.replace(/{incident-date}/g, '<span class="incident-date-placeholder"></span>')
@@ -52,7 +50,6 @@
 		$('span.incident-explained-placeholder', $blockContext).text($('#incident-explained-input').val());
 		$('span.forum-name-placeholder', $blockContext).text($('#forum-name-input').val());
 		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
-		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
 		$('span.link-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startShort);
