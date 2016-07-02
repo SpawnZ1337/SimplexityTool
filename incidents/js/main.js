@@ -147,7 +147,7 @@
 
 				$.ajax({
 					method: 'GET',
-					url: 'content/' + selectedGame + '/' + contentToLoadFileName,
+					url: 'content/' + contentToLoadFileName,
 					cache: false,
 					success: function (specificContent) {
 						if (specificContent !== undefined && specificContent !== null && specificContent !== '') {
