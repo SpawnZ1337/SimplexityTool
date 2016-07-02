@@ -74,35 +74,6 @@
 		});
 	}
 	
-	// Update the label text and input placeholder
-	// with the right ingame name text for the selected game
-	function displayNewIngameNameText(selectedGame) {
-		var ingameNameText;
-		
-		switch (selectedGame) {
-            case 'black-desert-online':
-                ingameNameText = 'Ingame Name';
-                break;
-            
-			case 'heroes-of-the-storm':
-			case 'overwatch':
-				ingameNameText = 'Battle.net Tag';
-				break;
-				
-			case 'paladins':
-				ingameNameText = 'Paladins Username';
-				break;
-			
-			default:
-				ingameNameText = 'Ingame Name';
-				break;
-		}
-		
-		var $input = $('#new-ingame-name-input');
-		$input.prev('label').text(ingameNameText);
-		$input.attr('placeholder', ingameNameText);
-	}
-
 	// document.ready event handler
 	$(function () {
 		
@@ -116,28 +87,6 @@
 			});
 		});
 		
-		// New content should be loaded when the game in the select changes
-		// Add the event handler for it and trigger it afterwards
-		$('#game-select').change(function () {
-			var $gameSelect = $(this);
-			var selectedGame = $gameSelect.val();
-			
-			// Update the label text and input placeholder for the ingame name
-			displayNewIngameNameText(selectedGame);
-
-			// Hide form controls that are specifically there for another game
-			// Show form controls that are specifically there for the chosen game
-			$('.new-user-details-control').each(function () {
-				var $detailsControl = $(this);
-				var showControlForGames = $detailsControl.data('show-for-games');
-				
-				if (showControlForGames.split(' ').indexOf(selectedGame) !== -1 || showControlForGames === 'all') {
-					$detailsControl.parent('.form-group').show();
-				} else {
-					$detailsControl.parent('.form-group').hide();
-				}
-			});
-			
 			// Load the content from the HTML files in the different content blocks
 			// This method will first look for the HTML file in the game specific folder
 			// When the HTML file found in there is empty, it will load the content from the HTML file in the main 'content' folder
