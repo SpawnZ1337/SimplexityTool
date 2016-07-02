@@ -87,24 +87,24 @@
 			});
 		});
 		
-			// Load the content from the HTML files in the different content blocks
-			// This method will first look for the HTML file in the game specific folder
-			// When the HTML file found in there is empty, it will load the content from the HTML file in the main 'content' folder
-			$('.async-content-block').each(function () {
-				var $asyncContentBlock = $(this);
-				var contentToLoadFileName = $asyncContentBlock.data('content') + '.html';
+		// Load the content from the HTML files in the different content blocks
+		// This method will first look for the HTML file in the game specific folder
+		// When the HTML file found in there is empty, it will load the content from the HTML file in the main 'content' folder
+		$('.async-content-block').each(function () {
+			var $asyncContentBlock = $(this);
+			var contentToLoadFileName = $asyncContentBlock.data('content') + '.html';
 
-				$.ajax({
-					method: 'GET',
-					url: 'content/' + contentToLoadFileName,
-					cache: false,
-					success: function (defaultContent) {
-						if (defaultContent !== undefined && defaultContent !== null && defaultContent !== '') {
-							addContentWithValuesToBlock($asyncContentBlock, defaultContent);
+			$.ajax({
+				method: 'GET',
+				url: 'content/' + contentToLoadFileName,
+				cache: false,
+				success: function (defaultContent) {
+					if (defaultContent !== undefined && defaultContent !== null && defaultContent !== '') {
+						addContentWithValuesToBlock($asyncContentBlock, defaultContent);
 					}
-				});
+				}
 			});
-		}).change();
+		});
 		
 		// When the values in the form controls change, update the content blocks
 		$('input.new-user-details-control').on('input', newUserDetailsControlsChangeEventHandler);
