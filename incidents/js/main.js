@@ -53,7 +53,7 @@
 		$('span.link-application-placeholder', $blockContext).text($('#application-url-input').val());
 		$('span.link-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
-		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startLong);
+		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startShort);
 		$('span.people-involved-placeholder', $blockContext).text($('#people-involved-input').val());
 		$('span.incident-explained-placeholder', $blockContext).text($('#incident-explained-input').val());
 		$('span.proof-placeholder', $blockContext).text($('#proof-input').val());
