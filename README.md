@@ -1,1 +1,1 @@
-This repository contains utilities that are made available as a website on GitHub Pages to use for [Ethereal Gaming](http://ethereal-gaming.com/) Moderators, Senior Moderators, Section Leaders, Officers, and Owners.
+This repository contains utilities that are made available as a website on GitHub Pages to use for Void Gaming staff members
