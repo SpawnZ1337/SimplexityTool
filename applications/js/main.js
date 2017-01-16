@@ -8,7 +8,7 @@
 	// NOTE: The date will only update when the page is refreshed
 	var currentDateFormats = (function () {
 		var momentStart = moment();
-		var momentEnd = moment().add(14, 'days');
+		var momentEnd = moment().add(7, 'days');
 		var shortFormat = 'DD/MM/YYYY'
 		var longFormat = 'D MMMM';
 		
