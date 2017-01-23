@@ -1,6 +1,3 @@
-# Ethereal Gaming Utilities
-
-Hello everyone, it's Melidas. In this README I'll explain how you can tweak the tool safely, and how it works.
 
 ## Applications/Content
 
@@ -22,7 +19,7 @@ it will first look if there is content in
 When there is text in that HTML file, it will load that into the corresponding box
 and the script will move on.
 If the file is empty however, it will look at 
-[the 'default' ted-content.html file in this folder](https://github.com/melidas/melidas.github.io/blob/master/applications/content/ted-content.html).
+
 When this file has content, it will be loaded into the box.
 When it would also be empty, a generic *"No content has been found."* will be shown.
 
