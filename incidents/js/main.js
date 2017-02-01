@@ -40,6 +40,7 @@
 			.replace(/{people-involved}/g, '<span class="people-involved-placeholder"></span>')
 			.replace(/{incident-explained}/g, '<span class="incident-explained-placeholder"></span>')
 			.replace(/{proof}/g, '<span class="proof-placeholder"></span>')
+			.replace(/{min-maj}/g, '<span class="min-maj-placeholder"></span>')
 			
 	}
 
@@ -54,6 +55,7 @@
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startShort);
 		$('span.people-involved-placeholder', $blockContext).text($('#people-involved-input').val());
+		$('span.min-maj-placeholder', $blockContext).text($('#min-maj-input').val());
 	}
 
 	// Add the given content to the given contentBlock after the placeholders have been replaced by the text
