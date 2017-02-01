@@ -25,7 +25,7 @@
 		/*
 		 * The following placeholders are being used:
 		 * {forum-name}
-		 * {ts-id}
+		 * {min-maj-id}
 		 * {link-profile}
 		 * {link-ted}
 		 * {incident-date}
@@ -33,7 +33,7 @@
 		 */
 
 		return content.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
-			.replace(/{ts-id}/g, '<span class="ts-id-placeholder"></span>')
+			.replace(/{min-maj}/g, '<span class="min-maj-placeholder"></span>')
 			.replace(/{forum-profile}/g, '<span class="link-profile-placeholder"></span>')
 			.replace(/{link-ted}/g, '<span class="link-ted-placeholder"></span>')
 			.replace(/{incident-date}/g, '<span class="incident-date-placeholder"></span>')
@@ -49,7 +49,7 @@
 		$('span.proof-placeholder', $blockContext).text($('#proof-input').val());
 		$('span.incident-explained-placeholder', $blockContext).text($('#incident-explained-input').val());
 		$('span.forum-name-placeholder', $blockContext).text($('#forum-name-input').val());
-		$('span.ts-id-placeholder', $blockContext).text($('#ts-id-input').val());
+		$('span.min-maj-placeholder', $blockContext).text($('#min-maj-input').val());
 		$('span.link-profile-placeholder', $blockContext).text($('#profile-url-input').val());
 		$('span.link-ted-placeholder', $blockContext).text($('#ted-url-input').val());
 		$('span.incident-date-placeholder', $blockContext).text(currentDateFormats.startShort);
