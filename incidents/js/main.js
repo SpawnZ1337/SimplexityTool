@@ -106,7 +106,7 @@
 	$(function () {
 		
 		$('#clear-button').click(function () {
-			$('input.form-control').val('').trigger('input');
+			$('input.form-control, textarea.form-control').val('').trigger('input');
 			
 			$('select.form-control').each(function () {
 				var $select = $(this);
@@ -172,7 +172,7 @@
 		}).change();
 		
 		// When the values in the form controls change, update the content blocks
-		$('input.new-user-details-control').on('input', newUserDetailsControlsChangeEventHandler);
+		$('input.new-user-details-control, textarea.new-user-details-control').on('input', newUserDetailsControlsChangeEventHandler);
 		$('select.new-user-details-control').change(newUserDetailsControlsChangeEventHandler);
         
         // Show the notification modal
