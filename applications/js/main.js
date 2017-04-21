@@ -41,6 +41,7 @@
 		return content.replace(/{game-name}/g, '<span class="game-name-placeholder"></span>')
 			.replace(/{forum-name}/g, '<span class="forum-name-placeholder"></span>')
 			.replace(/{ingame-name}/g, '<span class="ingame-name-placeholder"></span>')
+		.replace(/{steam-name}/g, '<span class="steam-name-placeholder"></span>')
 			.replace(/{hots-region}/g, '<span class="hots-region-placeholder"></span>')
 			.replace(/{lol-region}/g, '<span class="lol-region-placeholder"></span>')
 			.replace(/{overwatch-region}/g, '<span class="overwatch-region-placeholder"></span>')
@@ -58,6 +59,7 @@
 		$('span.game-name-placeholder', $blockContext).text($('#game-select option:selected').text());
 		$('span.forum-name-placeholder', $blockContext).text($('#new-forum-name-input').val());
 		$('span.ingame-name-placeholder', $blockContext).text($('#new-ingame-name-input').val());
+	$('span.steam-name-placeholder', $blockContext).text($('#new-steam-name-input').val());
 		$('span.hots-region-placeholder', $blockContext).text($('#new-hots-region-select').val());
 		$('span.lol-region-placeholder', $blockContext).text($('#new-lol-region-select').val());
 		$('span.overwatch-region-placeholder', $blockContext).text($('#new-overwatch-region-select').val());
@@ -101,6 +103,10 @@
 				
 			case 'paladins':
 				ingameNameText = 'Paladins Username';
+				break;
+				
+				case 'counter-strike':
+				ingameNameText = 'Steam Name';
 				break;
 			
 			default:
