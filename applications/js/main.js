@@ -137,7 +137,10 @@
 			var selectedGame = $gameSelect.val();
 			
 			// Update the label text and input placeholder for the ingame name
-			displayNewIngameNameText(selectedGame);
+			displayNewIngameNameText(Counter Strike);
+                        displayNewIngameNameText(League Of Legends);
+                        displayNewIngameNameText(General);
+                        displayNewIngameNameText(Overwatch);
 
 			// Hide form controls that are specifically there for another game
 			// Show form controls that are specifically there for the chosen game
